@@ -94,15 +94,12 @@ pub fn format_hook_message(comments: &[CommentInfo], custom_prompt: Option<&str>
     sb.push_str("2. This is a newly written comment: but it's in given, when, then format\n");
     sb.push_str("\t-> Tell the user it's a BDD comment and proceed (justify it)\n");
     sb.push_str("\t-> Note: This applies to comments only, not docstrings\n\n");
-    sb.push_str(
-        "3. This is a newly written comment/docstring: but it's a necessary comment/docstring\n",
-    );
     sb.push_str("\t-> Tell the user why this comment/docstring is absolutely necessary and proceed (justify it)\n");
     sb.push_str("\t-> Examples of necessary comments: complex algorithms, security-related, performance optimization, regex, mathematical formulas\n");
     sb.push_str("\t-> Examples of necessary docstrings: public API documentation, complex module/class interfaces\n");
     sb.push_str("\t-> IMPORTANT: Most docstrings are unnecessary if the code is self-explanatory. Only keep truly essential ones.\n\n");
     sb.push_str(
-        "4. This is a newly written comment/docstring: but it's an unnecessary comment/docstring\n",
+        "3. This is a newly written comment/docstring: but it's an unnecessary comment/docstring\n",
     );
     sb.push_str("\t-> Apologize to the user and remove the comment/docstring.\n");
     sb.push_str(
